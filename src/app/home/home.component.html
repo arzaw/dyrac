@@ -42,11 +42,11 @@ voluptas ullam quidem at quisquam aliquam veniam id accusamus. Minima?</div>
 </H1>
 
 <div id="cform">
-  <form id="contact">
-    <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-    <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+  <form id="contact" (ngSubmit)="onSubmit()">
+    <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name" [(ngModel)]="name"></p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email" [(ngModel)]="email"></p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject" [(ngModel)]="subject"></p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message" [(ngModel)]="message"></p>
     <p>
       <button class="w3-button w3-black" type="submit">
         <i class="fa fa-paper-plane"></i> SEND MESSAGE
